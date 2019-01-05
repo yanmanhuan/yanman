@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <title>大作业</title>
+	    <link rel="stylesheet" href="css/webweb.css">
+
+	    <script>
+	    	function getStyle(obj, attr){
+	            if(obj.currentStyle){
+		            return obj.currentStyle[attr];
+	            } else {
+		            return getComputedStyle(obj, null)[attr];
+	            }
+            }
+            function animate(obj,json,callback){
+	            clearInterval(obj.timer);
+	            obj.timer = setInterval(function(){
+		            var isStop = true;
+		            for(var attr in json){
+			            var now = 0;
+			            if(attr == 'opacity'){
+				             now = parseInt(getStyle(obj,attr)*100);
+			            }else{
+				            now = parseInt(getStyle(obj,attr));
+			            }
+			            var speed = (json[attr] - now) / 8;
+			            speed = speed>0?Math.ceil(speed):Math.floor(speed);
+			            var cur = now + speed;
+			            if(attr == 'opacity'){
+				            obj.style[attr] = cur / 100;
+			            }else{
+				            obj.style[attr] = cur + 'px';
+			            }
+			            if(json[attr] !== cur){
+				            isStop = false;
+			            }
+		            }
+		            if(isStop){
+			             clearInterval(obj.timer);
+			              callback&&callback();
+		            }
+     	        }, 30)
+            }
+
+	    </script>
+	</head>
+	<body>
+
+		<div id="big">
+			<div id="ff">
+				<!-- <div class="act">
+					<img src="images/erweima.jpg" alt="">
+				</div> -->
+				<div id="f1">
+					<img src="images/consult-s.png" alt="">
+					<img src="images/xiaobang.png" alt="">
+				</div>
+				<div id="f2">
+					<img src="images/youhui.png" alt="">
+				</div>
+				<div id="f3">
+					<img src="images/app.png" alt="">
+					
+				</div>
+				<div id="f4" style="overflow: hidden;">
+					<img src="images/serwei.png" id="wei" style="margin-left:10px; margin-top: 25px; float:left;" alt="">
+					<img src="images/erweima.jpg" style="float:left;" alt="">
+				</div>
+				<div id="f5">
+					<img src="images/cart.png" alt="">
+				</div>
+			</div>
+			<!-- 顶层的小条 -->
+			<div class ="dd">	
+			 <div id="a1">
+			 	<a href="" style="font-size:12px;color:grey;margin-left:85px; margin-right:400px;float:left;">帮5买，享帮帮</a>
+			 	<ul id="libiao">
+			 		<li><a href=""><img src="images/commom_min2.png" alt=""></a></li>
+			 		<li><a href=""><img src="images/commom_min3.png" alt=""></a></li>
+			 		<li><a href=""><img src="images/common_min4.png" alt=""></a></li>
+			 		<li>登录</li>
+			 		<li>注册</li>
+			 		<li><a href=""><img src="images/common_min6.png" alt="">消息</a></li>
+			 		<li><img src="images/dingdan.jpg" alt="">我的订单</li>
+			 		<li>我的收藏</li>
+			 		<li>绑钻兑换</li>
+			 		<li><img src="images/tp-my-phone.png" alt="">手机版</li>
+			 		<li>帮5淘</li>
+			 		<li>客户服务</li>
+			 		<li><img src="images/gouwuche.jpg" alt="">购物车</li>
+
+			 	</ul>
+			 </div>
+			 <div id="b5m" class="b5m">
+			 	<div id="b5m1">
+			 		<img src="images/logo_03.jpg" alt="这是一张图片">
+			 	</div>
+			 	<div id="b5m2">
+			 		<input type="text" value="输入商品或关键词，直通全网，快速帮5购"><button>搜全网</button>
+			 	</div>
+			 	<div id="b5m3">
+			 		<ul>
+			 			<li>
+			 				<img src="images/common_min5.png" alt="图片"><br>400-085-0505
+			 			</li>
+			 			<li><img src="images/common_min6.png" alt="图片"><br><span>mc@b5m.com</span></li>
+			 			<li><img src="images/wenhao.jpg" alt="">常见问题</li>
+			 		</ul>
+			 	</div>
+			 </div>
+			 <div id="smul">
+			 	<ul>
+			 		<li><a style="color:red;" href="">洗发护发</a></li>
+			 		<li><a style="color:red;" href="">日本纸尿裤</a></li>
+			 		<li><a href="">身体乳</a></li>
+			 		<li><a href="">内衣文胸</a></li>
+			 		<li><a style="color:#aca9d3;" href="">ipone 6s</a></li>
+			 		<li><a style="color:#aca9d3;" href="">iPad Air2</a></li>
+			 		<li><a href="">牛仔裤</a></li>
+			 		<li><a href="">奶粉</a></li>
+			 		<li><a href="">防晒霜</a></li>
+			 		<li><a href="">伞</a></li>
+			 	</ul>
+			 	<br>
+			 </div>
+			 </div>
+			 <div id="goods">
+			 	全部商品分类
+			 </div>
+			 <div id="tiao">
+			 	<ul>
+			 		<li>帮5赚</li>
+			 		<li>做韩品</li>
+			 		<li>超划算</li>
+			 		<li>品牌货栈</li>
+			 		<li>韩国馆</li>
+			 		<li>帮社区</li>
+			 		<li>一元兑奖<img src="images/hot.gif" alt="动图"></li>
+			 	</ul>
+			 </div>
+			 <div id="sbig">
+			 	<div id="sbig1">
+			 		<div id="sbig11">
+			 			<div id="sbig111">
+			 				当前搜索电商<br>&nbsp;<br>&nbsp;<br>全网
+			 			</div>
+			 			<div id="sbig112">
+			 				<table>
+			 					<tr>
+			 						<td>手机</td>
+			 						<td>数码</td>
+			 						<td>影像</td>
+			 						<td>配件</td>
+			 					</tr>
+			 					<tr>
+			 						<td>电脑</td>
+			 						<td>网络</td>
+			 						<td>办公</td>
+			 						<td>打印</td>
+			 					</tr>
+			 					<tr>
+			 						<td>家电</td>
+			 						<td>厨卫</td>
+			 						<td>生活</td>
+			 						<td>个户</td>
+			 					</tr>
+			 					<tr>
+			 						<td>园艺</td>
+			 						<td>家具</td>
+			 						<td>家纺</td>
+			 						<td>家饰</td>
+			 					</tr>
+			 					<tr>
+			 						<td>彩妆</td>
+			 						<td>面部</td>
+			 						<td>身体</td>
+			 						<td>香水</td>
+			 					</tr>
+			 					<tr>
+			 						<td>男装</td>
+			 						<td>女装</td>
+			 						<td>内衣</td>
+			 						<td>其他</td>
+			 					</tr>
+			 					<tr>
+			 						<td>女包</td>
+			 						<td>男包</td>
+			 						<td>女鞋</td>
+			 						<td>男鞋</td>
+			 					</tr>
+			 					<tr>
+			 						<td>运动</td>
+			 						<td>户外</td>
+			 						<td>装备</td>
+			 						<td>服饰</td>
+			 					</tr>
+			 					<tr>
+			 						<td>儿童</td>
+			 						<td>婴儿</td>
+			 						<td>食品</td>
+			 						<td>玩具</td>
+			 					</tr>
+			 					<tr>
+			 						<td>乐器</td>
+			 						<td>家宠</td>
+			 						<td>收藏</td>
+			 						<td>鲜花</td>
+			 					</tr>
+			 					<tr>
+			 						<td>保健</td>
+			 						<td>理疗</td>
+			 						<td>药品</td>
+			 						<td>眼镜</td>
+			 					</tr>
+			 					<tr>
+			 						<td>果蔬</td>
+			 						<td>礼品</td>
+			 						<td>粮油</td>
+			 						<td>特产</td>
+			 					</tr>
+			 					<tr>
+			 						<td>文艺</td>
+			 						<td>生活</td>
+			 						<td>科技</td>
+			 						<td>教育</td>
+			 					</tr>
+			 				</table>
+			 			</div>
+			 		</div>
+			 		<div id="sbig12">
+			 			<ul>
+			 				<li>
+			 					<img src="images/dd_03.jpg" alt="图片">
+			 					<a href="">什么是帮5购</a>
+			 				</li>
+			 				<li>
+			 					<img src="images/dd_06.jpg" alt="图片">
+			 					<a href="">帮5购提供什么服务</a>
+			 				</li>
+			 				<li>
+			 					<img src="images/dd_08.jpg" alt="图片">
+			 					<a href="">如何开通帮5购服务</a>
+			 				</li>
+			 			</ul>
+			 		</div>
+			 	</div>
+			 	<div id="sbig2">
+			 		<div id="box">
+			 			<div id="sbig21">
+			 			    <div id="slide"><img src="images/bann6.png" alt=""></div>
+			 			    <div id="slide"><img src="images/bann1.jpeg" alt=""></div>
+			 			    <div id="slide"><img src="images/bann2.jpeg" alt=""></div>
+			 			    <div id="slide"><img src="images/bann3.jpeg" alt=""></div>
+			 			    <div id="slide"><img src="images/bann4.jpeg" alt=""></div>
+			 			    <div id="slide"><img src="images/bann5.jpeg" alt=""></div>
+			 			    <div id="slide"><img src="images/bann6.png" alt=""></div>
+			 			    <div id="slide"><img src="images/bann1.jpeg" alt=""></div>
+			 		    </div>
+			 		    <span id="left"><img src="images/spanl.jpg" alt=""></span>
+		                <span id="right"><img src="images/spanr.jpg" alt=""></span>
+		                <ul class="nav" id="nav">
+			                <li id="active" class="active">1</li>
+			                <li>2</li>
+			                <li>3</li>
+			                <li>4</li>
+			                <li>5</li>
+			                <li>6</li>
+		                </ul>
+			 		</div>
+			 		
+			 		<div id="sbig22">
+			 			<a href="">
+			 				<img src="images/1(1).jpg" alt="">
+			 			</a>
+			 			<a href="">
+			 				<img src="images/2.jpg" alt="">
+			 			</a>
+			 			<a href=""><img src="images/3(1).png" alt=""></a>
+			 			<a href=""><img src="images/qqq.png" alt=""></a>
+			 		</div>
+			 	</div>
+			 	<div id="sbig3">
+			 		<div id=sbig31>
+			 			<img src="images/ico-notice.png" alt="">
+			 			<span>帮帮快讯</span>
+			 			<img src="images/jiantou.jpg" alt="">
+			 		</div>
+			 		<div id="adsbig32">
+			 			<ul id="ul">
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整1</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整2</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整3</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整4</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整5</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整6</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整7</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整8</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整10</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整11</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整12</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整13</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整14</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整1</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整2</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整3</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整4</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整5</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整6</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整7</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整8</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整10</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整11</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整12</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整13</a></li>
+			 				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;[公告] &nbsp;帮购及VIP调整14</a></li>
+			 			</ul>
+			 		</div>
+			 		<div id="sbig33">
+			 			&nbsp;&nbsp;&nbsp;
+			 			<img src="images/phone.png" alt="">
+			 			&nbsp;&nbsp;&nbsp;
+			 			话费充值
+			 			<span style="color:#fe6c00;">(可使用超级黄钻)</span>
+			 			<input type="text" value="请输入手机号" style="color:grey; margin-left:15px; margin-top: 15px;">
+			 			<select name="money" id="money">
+			 				<option value="30" selected="30">30</option>
+			 				<option value="50">50</option>
+			 				<option value="100">100</option>
+			 				<option value="120">120</option>
+			 				<option value="400">400</option>
+			 				<option value="5000">5000</option>
+			 			</select>
+			 			<div id="zim" style="margin-top: 15px;">￥30</div>
+			 			<button id="btn1">充值</button>
+			
+			 		</div>
+			 	</div>
+			 	<div id="bbig">
+			 		<div id="bbig1">
+			 			<img src="images/loginB.jpg" alt="">
+			 	   </div>
+			 		<div id="bbig2">
+			 			<table>
+			 				<tr>
+			 					<th>购物指南</th>
+			 					<th>支付相关</th>
+			 					<th>售后服务</th>
+			 					<th>VIP服务</th>
+			 					<th>帮韩品</th>
+			 					<th>更多</th>		 					
+			 				</tr>
+			 				<tr>
+			 					<td>如何下单</td>
+			 					<td>支付方式</td>
+			 					<td>取消订单</td>
+			 					<td>VIP服务</td>
+			 					<td>韩国正品</td>
+			 					<td>手机APP</td>
+			 				</tr>
+			 				<tr>
+			 					<td>帮5购流程</td>
+			 					<td>安全设置</td>
+			 					<td>申请售后</td>
+			 					<td>如何成为VIP</td>
+			 					<td>闪电发货</td>
+			 					<td>帮5采APP</td>
+			 				</tr>
+			 				<tr>
+			 					<td>订单查询</td>
+			 					<td>账户信息</td>
+			 					<td>退货流程</td>
+			 					<td>超级帮钻</td>
+			 					<td>帮韩品售后</td>
+			 					<td>帮5淘插件</td>
+			 				</tr>
+			 				<tr>
+			 					<td>物流配送</td>
+			 					<td>&nbsp;</td>
+			 					<td>退款相关</td>
+			 					<td>&nbsp;</td>
+			 					<td>&nbsp;</td>
+			 					<td>其他</td>
+			 				</tr>
+			 			</table>
+			 		</div>
+			 		<div id="bbig3">
+			 			<img src="images/erweima.jpg" alt="">
+			 		</div>
+			    </div>
+			    <div id="cen">
+			    	<ul>
+			    		<li>关于帮5买</li>
+			    		<li>联系我们</li>
+			    		<li>合作商家</li>
+			    		<li>友情链接</li>
+			    		<li>加入我们</li>
+			    		<li>移动应用</li>
+			    		<li>热门</li>
+			    		<li>广告联盟</li>
+			    		<li>使用条框</li>
+			    	</ul>
+			    	&nbsp;
+			    	<br>
+			    	&nbsp;
+			    	<br>
+			    	 <p>Copyright @ 2011-2015 B5M.COM.All rigths reserved.Powered by B5Msoft Co Ltd</p>
+			    	 <p>
+			    	 	增值电信业务经营许可证：沪B2-20130065号|中华人民共和国互联网药品信息服务资格证书（沪）-非经营性-2013-0034沪卫（中国网申）【2015】10032号 沪ICP备11034776号-3|食品流通许可证；
+			    	 </p>
+			    </div>
+			    <div id="tutu">
+			    	<img src="images/bo1.gif" alt="">
+			    	<img src="images/bo2.png" alt="">
+			    	<img src="images/bo3.gif" alt="">
+			    	<img src="images/bo4.png" alt="">
+			    	<img src="images/bo5.png" alt="">
+			    	<img src="images/bo6.png" alt="">
+			    	<img src="images/bo7.png" alt="">
+			    </div>
+			 </div>
+		</div>
+		<script>
+			var zim=document.getElementById("zim");
+			var money=document.getElementById("money");
+			money.onclick=function(){
+				zim.innerHTML="￥"+money.value;
+			}
+			
+		    var box = document.getElementById('box');
+		    var oNavlist = document.getElementById('nav').children;
+		    var slider = document.getElementById('sbig21');
+		    var left = document.getElementById('left');
+		    var right = document.getElementById('right');
+		    var index = 1;
+		    var timer;
+		    var isMoving = false;
+
+		    function next(){
+		    	if(!isMoving){
+		    		isMoving=true;
+			        index++;
+			        navChange();
+			        animate(slider,{left:-800*index},function(){
+			    	    if(index===7){
+			    		    slider.style.left="-800px";
+			    		    index=1;
+			    	    }
+			    	    isMoving=false;
+			        });
+		    	}
+		    }
+
+		     function prev(){
+		     	if(isMoving){
+		     		return;
+		     	}
+		     	isMoving=true;
+			    index--;
+			    navChange();
+			    animate(slider,{left:-800*index},function(){
+			    	if(index===0){
+			    		slider.style.left="-4800px";
+			    		index=6;
+			    	}
+			    	isMoving=false;
+			    });
+		    }
+
+		    var timer=setInterval(next,2000);
+
+		    box.onmouseover=function(){
+		    	animate(left,{opacity:50})//显现左右箭头；透明
+		    	animate(right,{opacity:50})
+		    	clearInterval(timer)
+		    }
+
+		    box.onmouseout=function(){
+		    	animate(left,{opacity:0});
+		    	animate(right,{opacity:0});
+		    	timer=setInterval(next,2000);
+		    }
+
+		    right.onclick=next;
+		    left.onclick=prev;
+
+		    for(var i=0;i<oNavlist.length;i++){
+		    	oNavlist[i].idx=i;
+		    	oNavlist[i].onclick=function(){
+		    		index=this.idx+1;
+		    		navChange();
+		    		animate(slider,{left:-800*index})
+		    	}
+		    }
+
+		    // //小按钮背景色
+		    function navChange(){
+		    	for(var i=0;i<oNavlist.length;i++){
+		    		oNavlist[i].className="";
+		    	}
+		    	if(index>6){
+		    		oNavlist[0].className="active";
+		    	}
+		    	else if(index===0){
+		    		oNavlist[5].className="active";
+		    	}
+		    	else{
+		    		oNavlist[index-1].className="active";
+		    	}
+
+		    }
+
+		    var ul = document.getElementById("ul");
+		    var indexx=1;
+            function show() {
+                var top = ul.offsetTop - 1; 
+                ul.style.top = top + "px"; 
+                if (-1* ul.offsetTop >= ul.offsetHeight/2) {
+                   ul.style.top = 0;
+                }
+            }
+            var t = setInterval(show, 20);
+            var li = document.getElementsByTagName("li");
+            for (var i = 0; i < li.length; i++) {
+                li[i].onmouseout = function () {
+                    t = setInterval(show, 20);
+
+                };
+                li[i].onmouseover = function () {
+                   clearInterval(t);
+                };
+            }
+            //悬浮
+            window.onload=function(){
+            	var dd=document.getElementsByClassName("dd")[0];
+            	window.onsroll=function(){
+            		var st=document.documentElement.scrollTop || document.body.scrollTop;
+            		if(st>1){
+            			dd.style.position="fixed"
+            		}
+            		else{
+            			dd.style.position="static"
+            		}
+            	}
+            }
+           //定位的滑入滑出
+           var ff=document.getElementById("ff");
+           var f1=document.getElementById("f1");
+           var f2=document.getElementById("f2");
+           var f3=document.getElementById("f3");
+           var f4=document.getElementById("f4");
+           var f5=document.getElementById("f5");
+           var act=document.getElementById("act");
+           f1.onmouseover=function(){
+           	animate(f1,{marginLeft:40},function(){});
+           }
+           f1.onmouseout=function(){
+           	animate(f1,{marginLeft:120},function(){});
+           }
+           f2.onmouseover=function(){
+           	animate(f2,{marginLeft:40},function(){});
+           }
+           f2.onmouseout=function(){
+           	animate(f2,{marginLeft:120},function(){});
+           }
+           f3.onmouseover=function(){
+           	animate(f3,{marginLeft:40},function(){});
+           }
+           f3.onmouseout=function(){
+           	animate(f3,{marginLeft:120},function(){});
+           }
+           f4.onmouseover=function(){
+           	animate(f4,{marginLeft:40},function(){});
+           }
+           f4.onmouseout=function(){
+           	animate(f4,{marginLeft:120},function(){});
+           }
+           f5.onmouseover=function(){
+           	animate(f5,{marginLeft:40},function(){});
+           }
+           f5.onmouseout=function(){
+           	animate(f5,{marginLeft:120},function(){});
+           }
+		</script>
+	</body>
+</html>

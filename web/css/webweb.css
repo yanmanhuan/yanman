@@ -1,0 +1,445 @@
+/*
+* @Author: 7560-1525
+* @Date:   2018-12-10 19:29:43
+* @Last Modified by:   7560-1525
+* @Last Modified time: 2019-01-04 17:29:08
+*/
+*{
+	padding: 0px;
+	margin: 0px;
+}
+a{
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+} 
+#big{
+	width:1350px;
+	height: 1065px;
+	margin-top: 10px;
+	margin: 0 auto;
+
+}
+#ff{
+	width:160px ;
+	height: 520px;
+	position: fixed;
+	top: 100px;
+	right:60px;
+	overflow: hidden;
+}
+#f1{
+	width: 40px;
+	margin-left: 120px;
+}
+#f2{
+	width: 120px;
+	background-color: #ff9260;
+	margin-bottom:1px;
+	margin-left:120px; 
+}
+#f3{
+	width: 40px;
+	height:50px ;
+	margin-left: 120px;
+	background-color: #ff9260;
+}
+#f4{
+	width: 120px;
+	height: 70px;
+	background-color: #ff9260;
+	margin-left: 120px;
+}
+#f5{
+	width: 40px;
+	margin-left: 120px;
+
+}
+#a1{
+	width: 1323px;
+	height: 36px;
+}
+#libiao li{
+	float: left;
+	margin-left: 17px;
+	font-size: 12px;
+	color: grey;
+	text-align: center;
+	line-height: 19px;
+	list-style-type: none;
+}
+#libiao li img{
+	float: left;
+	margin-right: 5px;
+}
+.dd{
+	width: 1420px;
+	height: 130px;
+	z-index: 999;
+	background-color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.b5m{
+	width: 1250px;
+	height: 62px; 
+	margin-left: 85px;
+	background: white;
+}
+#b5m1{
+	margin-right: 100px;
+	float: left;
+}
+#b5m2{
+	float: left;
+	padding-top: 15px;
+}
+#b5m2 input{
+	width: 500px;
+	height: 40px;
+	border: solid 2px #fe6c00;
+	font-size: 18px;
+	color: grey;
+}
+#b5m2 button{
+	width: 84px;
+	height: 45px;
+	background-color: #fe6c00;
+	font-size: 18px;
+	color: white;
+}
+#b5m3{
+	float: left;
+	padding-top: 15px;
+	margin-left: 100px;
+
+}
+#b5m3 span{
+	margin-top: -200px;
+	margin-top: -30px;
+}
+#b5m3 li{
+	width: 90px;
+	height: 40px;
+	border: solid 1px #f0efed;
+	float: left;
+	font-size: 10px;
+	color: grey;
+	text-align: center;
+	line-height: 18px;
+}
+ #b5m3 li:last-child{
+	background-color: #fe6c00;
+	font-size: 15px;
+	height: 25px;
+	color: white;
+	padding-top: 15px;
+} 
+#smul li{
+	float: left;
+	font-size: 10px;
+	color: grey;
+	border-right: solid 1px grey;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-top: 5px;
+}
+#goods{
+	width: 170px;
+	height: 40px;
+	float: left;
+	background-color: #fe6c00;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+	margin-top: -40px;
+	margin-left: 85px;
+	margin-bottom: 50px;
+}
+#tiao{
+	width: 800px;
+	height: 40px;
+	float: left;
+	margin-top: -70px;
+	margin-bottom: 25px;
+}
+#tiao li{
+	float: left;
+	font-size: 20px;
+	line-height:40px;
+	text-align: center;
+	margin-top: 22px;
+    padding-left: 40px;
+}
+#sbig{
+	width: 1350px;
+	height: 900px;
+	background-color: #f8f7f6;
+	border-top: solid 1px  #fe6c00;
+	margin-top: 180px;
+}
+#sbig1{
+	width: 170px;
+	height: 550px;
+	float: left;
+	margin-left: -170px;
+	margin-top: 0px;
+	background-color: white;
+
+}
+#sbig2{
+	width:820px ;
+	height: 550px;
+	background-color: white;
+	float: left;
+}
+#sbig111{
+	width: 25px;
+	height: 315px;
+	float: left;
+	background-color: #4c4c4a;
+	font-size: 15px;
+	color: red;
+	text-align: center;
+	line-height: 20px; 
+	padding-top: 30px;
+	border-bottom: solid 1px red;
+}
+#sbig112{
+	width: 145px;
+	height: 345px;
+	float: left;
+	border-bottom: solid 1px red;
+}
+#sbig112 table{
+	margin-top: 20px;
+	margin-left: 10px
+}
+#sbig112 table td{
+	font-size: 5px;
+	padding: 5px;
+}
+#sbig12{
+	width: 170px;
+	height: 125px;
+	margin-top: 345px;
+}
+#sbig12 li{
+	width: 168px;
+	height: 27px;
+	text-align: left;
+	line-height: 27px;
+	font-size:12px ;
+	color: #855d38;
+	margin: 10px;
+}
+#sbig12 li img{
+	margin: 5px;
+}
+#sbig12 li img:first-child{
+	margin-top: 20px;
+}
+#sbig12 a{
+	line-height: 20px;
+    color: #855d38;
+	margin-top: -30px;
+}
+#box{
+	width: 800px;
+	height: 361px;
+	position: relative;
+	overflow: hidden;
+}
+#sbig21{
+	width: 6400px;
+	height: 361px;
+	left: -800px;
+	position: absolute;
+}
+#slide{
+	width: 800px;
+	overflow: hidden;
+	float: left;
+}
+#box span{
+	display: block;
+	width: 30px;
+	height: 50px;
+	text-align: center;
+	cursor: pointer;
+	position: absolute;
+	font-size: 30px;
+	line-height: 50px;
+	background: rgba(255, 0, 0);
+	top: 175px;
+	opacity: 0;
+}
+#left{
+	left: 30px;
+}
+#right{
+	right: 30px;
+}
+#nav{
+	position: absolute;
+	left: 350px;
+	bottom: 20px;
+}
+#nav li{
+	float: left;
+	width: 20px;
+	height: 20px;
+	background: #ccc;
+	cursor: pointer;
+	margin: 0 10px;
+	border-radius: 50%;
+	text-align: left;
+	text-align: center;
+}
+#nav>.active{
+	background: red;
+}
+#sbig3{
+	width: 210px;
+	height: 548px;
+	float: left;
+	font-size: 13px;
+	color: #fe6c00;
+	text-align: left;
+	background-color: white;
+}
+#sbig31{
+	height: 40px;
+	width: 210px;
+	border-bottom: solid 1px grey;
+	line-height: 40px;
+}
+#sbig31 img:first-child{
+	margin-right: 15px;
+	margin-left: 24px;
+}
+#sbig31 img:last-child{
+	margin-left: 75px;
+}
+#adsbig32 ul{
+	 list-style: none;
+	 position: absolute;
+    
+}
+#adsbig32 li{
+	padding: 6px;
+	color: #fe6c00;
+}
+#adsbig32 li a{
+	font-size: 13px;
+	color: #fe6c00;
+}
+#adsbig32{
+	width: 205px;
+	height: 320px;
+	position: absolute;
+	border-bottom: solid 1px grey;
+	overflow: hidden;
+	/* position: relative; */
+}
+#sbig33{
+	width: 210px;
+	height: 185px;
+	font-size: 13px;
+	color: black;
+	margin-top: 350px;
+}
+#sbig33 select{
+	margin-left: 15px;
+	margin-top: 15px;
+	float: left;
+}
+#zim{
+	margin-left: 5px;
+	margin-top: 5px;
+	color: #fe6c00;
+	line-height: ;
+	float: left;
+}
+#btn1{
+	width: 180px;
+	height: 25px;
+	background-color: #fe6c00 ;
+	color: white;
+	text-align: center;
+	margin-top: 15px;
+	margin-left: 15px;
+
+}
+#bbig{
+	width: 1170px;
+	height: 175px;
+	margin-left:85px ;
+	float: left;
+}
+#bbig1{
+	float: left;
+}
+#bbig2{
+	width: 800px;
+	height: 175px;
+    float: left;
+    margin-top: 40px;
+
+}
+#bbig2 table {
+	margin-left: 80px;
+}
+#bbig2 table td{
+	width: 120px;
+	text-align: left;
+	font-size: 8px;
+	line-height: 25px;
+}
+#bbig2 table th{
+	width: 120px;
+	font-size: 13px;
+	text-align: left;
+}
+#bbig3{
+	width: 140px;
+	height: 174px;
+	float: left;
+	margin-top: 22px;
+	margin-left: 60px;
+}
+#cen{
+	width: 750px;
+	height: 25px;
+	margin: 0 auto;
+}
+#cen ul{
+	margin: 0 auto;
+}
+#cen li{
+	width: 60px;
+	height: 15px;
+	float:left;
+	font-size: 5px;
+	color: grey;
+	text-align: center;
+	margin: 5px;
+	border-right: solid 1px grey;
+}
+#cen li:last-child{
+	border-right: none;
+}
+#cen p{
+	font-size: 5px;
+	color: grey;
+	text-align: center;
+}
+#tutu{
+	width: 1350px;
+	height: 63px;
+	margin-top: 800px;
+	text-align: center;
+} 
